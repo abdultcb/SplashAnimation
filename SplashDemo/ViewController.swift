@@ -16,20 +16,21 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.blackColor()
         
+        // Animates Title and background color smoothly
         let mainScreen = UIScreen.mainScreen().bounds.size
         let view = UIView(frame: CGRectMake(0,0,mainScreen.width, mainScreen.height))
         view.backgroundColor = UIColor.blackColor()
         self.view.addSubview(view)
         
         let label = UILabel(frame: CGRectMake(0,100,mainScreen.width, 100))
-        label.text = "Splash Animation"
+        label.text = "Splash Animation" // Your text here
         label.textAlignment = .Center
         label.font = UIFont.systemFontOfSize(30, weight: 10)
         label.backgroundColor = UIColor.clearColor()
         label.textColor = UIColor.clearColor()
         self.view.addSubview(label)
         
-        
+        // Transition of views
        UIView.transitionWithView(label, duration: 1, options: .TransitionCrossDissolve, animations: {
         label.textColor = UIColor.redColor()
         view.backgroundColor = UIColor.blackColor()
